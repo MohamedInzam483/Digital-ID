@@ -14,7 +14,7 @@ import java.util.List;
 
 /**
  * Person class represents a citizen in the DigitalID platform.
- *
+ * 
  * Responsibilities:
  * - Store personal information
  * - Validate input data using buisness rules
@@ -24,7 +24,7 @@ import java.util.List;
  * - addPerson(): Adds new person to the system
  * - updatePersonalDetails(): Updates an existing person's details
  * - addID(): Associates identification documents with a person
- *
+ * 
  * It also handles:
  * - Validation logic (Regex, date format, ID rules)
  * - TXT file read/write operations
@@ -90,7 +90,7 @@ public class Person {
 
     /**
      * Updates an existing person's details in persons.txt
-     *
+     * 
      * Conditions:
      * 1. Under 18 → address cannot be changed
      * 2. If birthday changes → no other field can change
@@ -115,9 +115,9 @@ public class Person {
         if (!this.birthDate.equals(newBirthDate)) {
 
             if (!this.personID.equals(newPersonID) ||
-                    !this.firstName.equals(newFirstName) ||
-                    !this.lastName.equals(newLastName) ||
-                    !this.address.equals(newAddress)) {
+                !this.firstName.equals(newFirstName) ||
+                !this.lastName.equals(newLastName) ||
+                !this.address.equals(newAddress)) {
 
                 return false;
             }
@@ -222,7 +222,7 @@ public class Person {
     // =====================================================
     // Validation Methods
     // =====================================================
-    /**
+    /** 
      * Validates person ID format according to system rules
      */
     private boolean isValidPersonID(String id) {
@@ -244,7 +244,7 @@ public class Person {
     }
     /**
      * Validates adress format and ensures state is Victoris
-     *
+     * 
      */
 
     private boolean isValidAddress(String address) {
@@ -258,7 +258,7 @@ public class Person {
     }
     /**
      * Validates birth date format using dd- MM -yyyy pattern
-     *
+     * 
      */
 
     private boolean isValidBirthDate(String birthDate) {
@@ -271,7 +271,7 @@ public class Person {
             return false;
         }
     }
-    /**
+    /** 
      * Calculates age based on birth date and current date
      */
 
